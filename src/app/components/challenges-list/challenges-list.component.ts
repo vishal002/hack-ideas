@@ -2,6 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ChallengesService } from 'src/app/services/challenges.service';
 
 export interface UserData {
   id: string;
@@ -24,29 +25,9 @@ export class ChallengesListComponent implements OnInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
-    const users = [{
-      id: '1',
-      title: 'Smart tutor',
-      description: 'Help user to improve Language, Suggest ideas and unfamiliar words, Check Spell and Grammar and also suggest a solution.',
-      tags: 'tech',
-      count: '2'
-    }, {
-      id: '2',
-      title: 'Make Learning Fun',
-      description: 'Find Creative and fun way to engage kids more in learning.',
-      tags: 'feature',
-      count: '1'
-    }]
+  constructor(private challengesService: ChallengesService) { }
 
-    // Assign the data to the data source for the table to render
-    this.dataSource = new MatTableDataSource(users);
-  }
-
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-  }
+  ngAfterViewInit() {}
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -58,6 +39,16 @@ export class ChallengesListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getChallenges();
+  }
+
+  getChallenges() {
+    this.challengesService.getChallengesList().subscribe((data: any) => {
+      // Assign the data to the data source for the table to render
+      this.dataSource = new MatTableDataSource(data.data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    })
   }
 
   addChallenges() {

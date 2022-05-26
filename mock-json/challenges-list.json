@@ -1,0 +1,90 @@
+{
+  "/challenges": {
+      "get": {
+          "data": [
+            {
+              "id": "1",
+              "title": "Smart tutor",
+              "description": "Help user to improve Language, Suggest ideas and unfamiliar words, Check Spell and Grammar and also suggest a solution.",
+              "tags": "tech",
+              "count": "2"
+            },
+            {
+              "id": "2",
+              "title": "Make Learning Fun",
+              "description": "Find Creative and fun way to engage kids more in learning.",
+              "tags": "feature",
+              "count": "1"
+            },
+            {
+              "id": "3",
+              "title": "Solve Unemployment",
+              "description": "Create an easily accessible database which highlights the candidate’s skill and field of interest. We can start the collection of the database from the college level.",
+              "tags": "tech",
+              "count": "1"
+            },
+            {
+              "id": "4",
+              "title": "Practical Knowledge",
+              "description": "Theoretical stuff is available online easily, but finding practical stuff is very hard to find. Check Stuqi it has papers of exams but and there are many websites like it but no one has information about Practical of Schools or college level and their exams.",
+              "tags": "feature",
+              "count": "5"
+            },
+            {
+              "id": "5",
+              "title": "App to rate Handwriting ",
+              "description": "You can use some graphic image processing libraries in PHP to create such app that can rate handwriting.",
+              "tags": "feature",
+              "count": "6"
+            },
+            {
+              "id": "6",
+              "title": "Course and university finder",
+              "description": "There are many such websites but actually they are country or region basis what about an universal course and University finder.",
+              "tags": "tech",
+              "count": "1"
+            },
+            {
+              "id": "7",
+              "title": "Apps That Aid College Students",
+              "description": "An app that solve all the problems college students face in their college life which includes finding internship or a job, balancing their life and their schoolwork, navigating student loan debt, organize their assignments, set deadlines, and help them keep track of their grades. It is one of the best hackathon ideas for beginners.",
+              "tags": "feature",
+              "count": "10"
+            },
+            {
+              "id": "8",
+              "title": "Healthcare Record/Report Wallet",
+              "description": "Hospitals and large medical institutions deals with a lot of data, records and reports, these include transactional record, patients’ medical records, Consultation records, etc. You can build Safe Data Management Solution For Hospitals and patients that keep a record of everything, without being affected by a change of doctors, different health problems or anything. Patients and doctors can access all the records with a single login.",
+              "tags": "tech",
+              "count": "1"
+            },
+            {
+              "id": "9",
+              "title": "Make way for ambulances",
+              "description": "It is a major issue in populated or highly crowded areas and city. A system which keeps track of the empty lane and also warns people to keep that lane empty will be a helpful idea.",
+              "tags": "feature",
+              "count": "11"
+            },
+            {
+              "id": "10",
+              "title": "Rural Health care",
+              "description": "It will be one of the most helpful and Simple Hackathon Ideas of the year 2021, a system which keeps a database and allows rural area people to talk or take advice about their health to doctors who avoid going in these areas. So money, time and life of those needy people will be saved.",
+              "tags": "tech",
+              "count": "3"
+            },
+            {
+              "id": "11",
+              "title": "Communication between doctors and patients",
+              "description": "An All in One system which makes technical thing understandable to the patients, like patient can check their reports and also understand what is wrong or what is right in their report and also the same system will be helpful for the doctors so they can communicate with patients in a better way.",
+              "tags": "feature",
+              "count": "14"
+            }
+          ]
+      },
+      "post": {
+          "data": []
+      }
+  }
+}
+
+
