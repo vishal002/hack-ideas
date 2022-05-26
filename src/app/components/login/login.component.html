@@ -1,0 +1,20 @@
+<div class="login">
+    <mat-card class="example-card">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+            <mat-card-content>
+                <mat-form-field appearance="outline" class="example-form-field">
+                    <mat-label>Enter User Name</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="username">
+                    <mat-icon matSuffix>supervisor_account</mat-icon>
+                </mat-form-field>
+            </mat-card-content>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+                <button mat-button type="submit" [disabled]="!profileForm.valid">Login</button>
+            </mat-card-actions>
+            <mat-card-footer>
+                <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+            </mat-card-footer>
+        </form>
+    </mat-card>
+</div>
