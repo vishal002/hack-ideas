@@ -1,0 +1,25 @@
+.challenges-list {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .button-container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-top: 60px;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    td,
+    th {
+        width: 25%;
+    }
+}
