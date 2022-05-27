@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -15,12 +15,13 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.profileForm = this.fb.group({
-      username: [null, Validators.required]
+      employeeId: [null, Validators.required]
     })
   }
 
   onSubmit() {
-    this.router.navigate(['/dashboard', this.profileForm.value]);
+    this.router.navigateByUrl('/dashboard');
+    sessionStorage.setItem('user', this.profileForm.controls.employeeId.value);
   }
 
 }

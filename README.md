@@ -2,10 +2,10 @@
 
 ## Initial installation
 
-For application: 
+For Application: 
 Run `npm install` after cloneing repo from [Hack Ideas](https://github.com/vishal002/hack-ideas).
 
-For Mock Server 
+For [Mock Server](https://www.npmjs.com/package/mock-json-server) 
 1) `npm i mock-json-server`
 2) `mock-json-server mock-json/challenges-list.json --port=3000`
 
