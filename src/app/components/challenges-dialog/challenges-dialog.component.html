@@ -1,0 +1,31 @@
+<div class="challenges-dialog">
+    <h1 mat-dialog-title>Create Challenge</h1>
+    <div mat-dialog-content>
+        <form class="example-form" [formGroup]="createChallengesForm" (ngSubmit)="ngSubmit()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Title</mat-label>
+                <input matInput value="Title" formControlName="title">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Description</mat-label>
+                <textarea matInput maxlength="256" placeholder="Ex. It makes me feel..." formControlName="description"></textarea>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Select Tag</mat-label>
+                <input type="text" placeholder="Pick one"  matInput [matAutocomplete]="auto" formControlName="tags">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of options" [value]="option" >
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+
+            <div class="example-button-row">
+                <button mat-raised-button color="primary" (click)="cancelChallenge()" >Cancel</button>
+                <button mat-raised-button color="accent" [mat-dialog-close]="'YES'" type="submit">Create</button>
+            </div>
+        </form>
+    </div>
+</div>

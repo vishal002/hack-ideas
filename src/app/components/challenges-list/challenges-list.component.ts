@@ -3,14 +3,9 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ChallengesService } from 'src/app/services/challenges.service';
-
-export interface UserData {
-  id: string;
-  title: string;
-  description: string;
-  tags: string;
-  count: string;
-}
+import { MatDialog } from '@angular/material/dialog';
+import { ChallengesDialogComponent } from '../challenges-dialog/challenges-dialog.component';
+import { UserData } from 'src/app/interfaces/user-data';
 
 @Component({
   selector: 'app-challenges-list',
@@ -27,7 +22,7 @@ export class ChallengesListComponent implements OnInit {
 
   displayData = [];
 
-  constructor(private challengesService: ChallengesService) { }
+  constructor(private challengesService: ChallengesService, public dialog: MatDialog) { }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
@@ -44,16 +39,20 @@ export class ChallengesListComponent implements OnInit {
 
   getChallenges() {
     this.challengesService.getChallengesList().subscribe((data: any) => {
-      this.displayData = [...data.data]
-      // Assign the data to the data source for the table to render
-      this.dataSource = new MatTableDataSource(this.displayData);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
+      this.displayData = [...data.data];
+      localStorage.setItem('data', JSON.stringify(this.displayData));
+      this.updateMatTable();
     })
   }
 
   addChallenges() {
-
+    const dialogRef = this.dialog.open(ChallengesDialogComponent);
+    dialogRef.afterClosed().subscribe(result => {
+      if (result === 'YES') {
+        this.displayData = JSON.parse(localStorage.getItem('data')) || [];
+        this.updateMatTable();
+      }
+    });
   }
 
   upvote(row) {
@@ -61,6 +60,13 @@ export class ChallengesListComponent implements OnInit {
     if (index !== -1) {
       this.displayData[index].count++;
     }
+  }
+
+  updateMatTable() {
+    // Assign the data to the data source for the table to render
+    this.dataSource = new MatTableDataSource(this.displayData);
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
   }
 
 }

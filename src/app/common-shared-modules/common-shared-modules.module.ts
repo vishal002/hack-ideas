@@ -12,6 +12,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [],
@@ -29,7 +31,9 @@ import { MatChipsModule } from '@angular/material/chips';
     MatTableModule,
     MatPaginatorModule,
     MatExpansionModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule,
+    MatAutocompleteModule
   ]
 })
 export class CommonSharedModulesModule { }

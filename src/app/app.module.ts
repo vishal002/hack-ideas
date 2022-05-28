@@ -13,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { ChallengesListComponent } from './components/challenges-list/challenges-list.component';
+import { ChallengesDialogComponent } from './components/challenges-dialog/challenges-dialog.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ChallengesListComponent } from './components/challenges-list/challenges
     LoginComponent,
     DashboardComponent,
     HeaderComponent,
-    ChallengesListComponent
+    ChallengesListComponent,
+    ChallengesDialogComponent
   ],
   imports: [
     BrowserModule,

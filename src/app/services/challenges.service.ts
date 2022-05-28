@@ -12,4 +12,9 @@ export class ChallengesService {
   getChallengesList() {
     return this.http.get(environment.challenges_list_api);
   }
+
+  // for post implemention
+  // createChallenge(body) {
+  //   return this.http.post(environment.challenges_list_api, body)
+  // }
 }
