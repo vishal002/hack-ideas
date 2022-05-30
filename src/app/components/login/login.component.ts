@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.router.navigateByUrl('/dashboard');
+    this.router.navigate(['/dashboard']);
     sessionStorage.setItem('user', this.profileForm.controls.employeeId.value);
   }
 
