@@ -35,7 +35,8 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 
 ## App Snapsorts
 
-![Home Page](https://github.com/vishal002/admin-ui/blob/main/snapsports/home.jpg?raw=true) 
-![Edit Page](https://github.com/vishal002/admin-ui/blob/main/snapsports/edit.jpg?raw=true) 
+![login Page](https://github.com/vishal002/hack-ideas/blob/master/src/assets/login.jpg?raw=true) 
+![Home Page](https://github.com/vishal002/hack-ideas/blob/master/src/assets/dashboard.jpg?raw=true) 
+![create Page](https://github.com/vishal002/hack-ideas/blob/master/src/assets/create.jpg?raw=true) 
 
 
