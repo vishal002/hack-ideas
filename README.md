@@ -33,3 +33,9 @@ Run `ng serve` OR `npm start` for a dev server. Navigate to `http://localhost:42
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## App Snapsorts
+
+![Home Page](https://github.com/vishal002/admin-ui/blob/main/snapsports/home.jpg?raw=true) 
+![Edit Page](https://github.com/vishal002/admin-ui/blob/main/snapsports/edit.jpg?raw=true) 
+
+
