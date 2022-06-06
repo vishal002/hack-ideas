@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
@@ -30,6 +31,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
     MatToolbarModule,
     MatTableModule,
     MatPaginatorModule,
+    MatSortModule,
     MatExpansionModule,
     MatChipsModule,
     MatDialogModule,

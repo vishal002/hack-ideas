@@ -24,6 +24,13 @@
     }
     td:nth-child(3),
     th:nth-child(3) {
-        width: 50%;
+        // width: 50%;
+        min-width: 600px;
+    }
+
+    .votes-count-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
